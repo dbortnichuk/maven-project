@@ -42,13 +42,13 @@ pipeline {
 //                }
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "cp **/target/*.war ~/install/apache-tomcat-8.5.37-stage/webapps"
+                        sh "cp **/target/*.war /home/dmytro/install/apache-tomcat-8.5.37-stage/webapps"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "cp **/target/*.war ~/install/apache-tomcat-8.5.37-prod/webapps"
+                        sh "cp **/target/*.war /home/dmytro/install/apache-tomcat-8.5.37-prod/webapps"
                     }
                 }
             }
